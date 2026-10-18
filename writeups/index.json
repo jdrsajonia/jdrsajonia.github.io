@@ -1,0 +1,27 @@
+{
+  "platforms": [
+    {
+      "name": "HTB",
+      "label": "Hack The Box",
+      "machines": [
+        {
+          "name": "Connected",
+          "difficulty": "Easy",
+          "os": "Linux",
+          "path": "writeups/HTB/Connected/writeup-Connected.md"
+        },
+        {
+          "name": "TwoMillion",
+          "difficulty": "Easy",
+          "os": "Linux",
+          "path": "writeups/HTB/TwoMillion/writeup-twomillion.md"
+        }
+      ]
+    },
+    {
+      "name": "THM",
+      "label": "TryHackMe",
+      "machines": []
+    }
+  ]
+}

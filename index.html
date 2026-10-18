@@ -1,109 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPYNET | Web Intelligence & Technology Mapping</title>
+    <title>jdrsajonia | Cybersecurity Writeups</title>
 
-    <!-- Theme -->
     <meta name="theme-color" content="#0b0f1a">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/tux_spynet_profesional.png">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Syntax highlighting (highlight.js, atom-one-dark) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <link rel="stylesheet" href="css/writeups.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="hero">
-        <img src="img/spynet_logo.png" alt="Spynet Logo" class="logo">
-
-        <h1>SPY<span>NET</span></h1>
-
-        <p class="subtitle">
-            Web Intelligence · Technology Mapping · OSINT Analysis
-        </p>
+    <!-- TOP BAR -->
+    <header class="wu-topbar">
+        <a class="wu-brand" href="index.html">
+            <img src="img/jdrsajonia_tux.png" alt="Spynet">
+            <span>jdr<span class="accent">sajonia</span></span>
+        </a>
+        <span class="wu-divider">//</span>
+        <span class="wu-section">Writeups</span>
+        <button class="wu-menu-btn" id="menuBtn" aria-label="Abrir/cerrar menú">&#9776;</button>
     </header>
 
-    <!-- BANNER -->
-    <section class="banner">
-        <img src="img/spynet_penguins.png" alt="Spynet banner">
-    </section>
+    <!-- LAYOUT -->
+    <div class="wu-layout">
 
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>What is Spynet?</h2>
-
-        <p>
-            <strong>Spynet</strong> is a web intelligence platform designed to analyze,
-            map and understand the technological composition of modern websites.
-            Through OSINT techniques and infrastructure analysis, the system provides
-            structured insights about technologies, integrations and services behind a domain.
-        </p>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features">
-        <h2>Core Features</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Technology Mapping</h3>
-                <p>
-                    Detect frontend frameworks, backend technologies,
-                    servers and third-party integrations.
-                </p>
+        <!-- SIDEBAR -->
+        <aside class="wu-sidebar" id="sidebar">
+            <div class="wu-sidebar-head">
+                <span class="dot"></span> Índice
             </div>
+            <nav id="tree" class="wu-tree">
+                <p class="wu-loading">Cargando índice…</p>
+            </nav>
+        </aside>
 
-            <div class="card">
-                <h3>Infrastructure Analysis</h3>
-                <p>
-                    Gather DNS, WHOIS and hosting-related information
-                    to better understand a website's infrastructure.
-                </p>
-            </div>
+        <!-- Backdrop (mobile) -->
+        <div class="wu-backdrop" id="backdrop"></div>
 
-            <div class="card">
-                <h3>Historical Intelligence</h3>
-                <p>
-                    Explore historical snapshots and technological
-                    evolution through archived web data.
-                </p>
+        <div class="wu-main">
 
-                <span class="soon">Experimental</span>
-            </div>
+            <!-- CONTENT -->
+            <main class="wu-content" id="content">
+                <div class="wu-welcome">
+                    <img src="img/jdrsajonia_tux.png" alt="Spynet Tux" class="wu-welcome-img">
+                    <h1>jdr<span class="accent">sajonia</span> · Writeups</h1>
+                    <p>Selecciona una máquina en el panel izquierdo para leer su writeup.</p>
+                    <p class="wu-welcome-sub">Watching every system. Auditing every weakness.</p>
+                </div>
+            </main>
+
+            <!-- FOOTER (se actualiza desde writeups.js) -->
+            <footer class="wu-footer">
+                <div class="wu-footer-term">
+                    <span class="prompt">jdrsajonia@spynet</span>:<span class="path">~</span>$
+                    <span id="footerCmd">ls writeups/</span><span class="cursor">_</span>
+                </div>
+                <div class="wu-footer-row">
+                    <a class="wu-footer-gh" href="https://github.com/jdrsajonia" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        @jdrsajonia
+                    </a>
+                    <span class="sep">//</span>
+                    <span>visitar: <a href="http://149.130.185.58" target="_blank" rel="noopener">http://149.130.185.58</a></span>
+                    <span class="sep">//</span>
+                    <span><b id="footerCount">0</b> writeups indexados</span>
+                    <span class="sep">//</span>
+                    <span>sesión <b id="footerUptime">00:00:00</b></span>
+                </div>
+                <div class="wu-footer-copy">
+                    © <span id="footerYear"></span> jdrsajonia · Watching every system. Auditing every weakness.
+                </div>
+            </footer>
 
         </div>
-    </section>
 
-    <!-- API -->
-    <section class="about">
-        <h2>REST API</h2>
+    </div>
 
-        <p>
-            Spynet also acts as a REST API capable of exposing structured
-            analysis results for external systems, scripts and integrations.
-        </p>
-    </section>
-
-    <!-- MASCOT -->
-    <section class="mascot">
-        <img src="img/tux_spynet_profesional.png" alt="Spynet Tux">
-
-        <p>
-            Watching every system.<br>
-            Auditing every weakness.
-        </p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Spynet · Developed by Spynella</p>
-    </footer>
+    <!-- Markdown + highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="js/writeups.js"></script>
 
 </body>
 </html>

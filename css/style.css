@@ -13,6 +13,39 @@ body {
     line-height: 1.6;
 }
 
+/* TOP NAV */
+.site-nav {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    position: sticky;
+    top: 0;
+    background: rgba(5, 7, 13, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 50;
+}
+
+.site-nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.site-nav a:hover { color: #e5e7eb; background: rgba(59,130,246,0.08); }
+
+.site-nav a.active {
+    color: #e5e7eb;
+    border-color: rgba(59,130,246,0.4);
+    background: rgba(59,130,246,0.1);
+}
+
 /* HEADER */
 .hero {
     text-align: center;

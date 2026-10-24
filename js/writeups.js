@@ -79,12 +79,12 @@ function transformCallouts(root) {
 }
 function calloutIcon(type) {
   const map = {
-    info: "ℹ️", note: "📝", abstract: "📋", summary: "📋",
-    warning: "⚠️", caution: "⚠️", attention: "⚠️",
-    danger: "⛔", bug: "🐞", error: "❌", failure: "❌",
-    tip: "💡", hint: "💡", success: "✅", check: "✅",
+    info: "[i]", note: "[#]", abstract: "[=]", summary: "[=]",
+    warning: "[!]", caution: "[!]", attention: "[!]",
+    danger: "[x]", bug: "[%]", error: "[x]", failure: "[x]",
+    tip: "[*]", hint: "[*]", success: "[+]", check: "[+]",
   };
-  return map[type] || "ℹ️";
+  return map[type] || "[i]";
 }
 
 /* ---------- render de un writeup ---------- */

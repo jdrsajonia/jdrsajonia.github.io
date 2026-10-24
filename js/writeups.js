@@ -140,7 +140,7 @@ async function renderWriteup(machine) {
   els.content.appendChild(doc);
   els.content.scrollIntoView({ block: "start" });
   window.scrollTo(0, 0);
-  document.title = `SPYNET | ${machine.name}`;
+  document.title = `jdrsajonia | ${machine.name}`;
 }
 
 function buildMeta(meta) {

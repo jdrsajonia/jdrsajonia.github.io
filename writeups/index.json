@@ -21,7 +21,14 @@
     {
       "name": "THM",
       "label": "TryHackMe",
-      "machines": []
+      "machines": [
+        {
+          "name": "Thompson",
+          "difficulty": "Easy",
+          "os": "Linux",
+          "path": "writeups/THM/Thompson/writeup-thompson.md"
+        }
+      ]
     }
   ]
 }
